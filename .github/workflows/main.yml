@@ -1,34 +1,33 @@
-name: 构建和推送 梦泽
+name: 构建并推送到Pages分支
 
 on:
   push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
+    branches: [main]
 
 jobs:
-  build_and_deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
+    - name: 检出代码
+      uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '22'
-          
-      - name: Install Dependencies
-        run: npm install
+    - name: 初始化Nodejs
+      uses: actions/setup-node@v4
+      with:
+        node-version: 20
 
-      - name: Build Project
-        run: npm run build
+    - name: 安装依赖
+      run: npm ci
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
-          commit_message: ' Publishing site from [${{ github.ref_name }}] 梦泽'
+    - name: 构建项目
+      run: npm run build
+
+    - name: 推送到gh-pages分支
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./dist
+        branch: gh-pages
