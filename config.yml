@@ -1,0 +1,10 @@
+games_list:
+  - game_name: 游戏一
+    game_logo: logo1.png
+    game_link: https://game1.com
+  - game_name: 游戏二
+    game_logo: logo2.png
+    game_link: https://game2.com
+  - game_name: 游戏三
+    game_logo: logo3.png
+    game_link: https://game3.com
