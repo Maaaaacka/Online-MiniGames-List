@@ -1,0 +1,10 @@
+<template>
+  <v-container>
+    <v-card>
+      <v-card-title>关于我们</v-card-title>
+      <v-card-text>
+        这是一个由梦泽开发、Macka搭建运维的在线游戏集合网站，共380余款游戏，总大小1.4GB，花费30元人民币。
+      </v-card-text>
+    </v-card>
+  </v-container>
+</template>
