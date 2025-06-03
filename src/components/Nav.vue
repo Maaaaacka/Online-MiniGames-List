@@ -1,7 +1,7 @@
 <template>
   <v-app-bar app color="primary" dark>
     <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
-    <v-toolbar-title>Macka的游戏合集</v-toolbar-title>
+    <v-toolbar-title>MaGames在线小游戏</v-toolbar-title>
     <v-spacer></v-spacer>
     <v-btn icon href="/about">
       <v-icon>mdi-information</v-icon>
