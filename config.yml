@@ -1,6 +1,6 @@
 games_list:
   - game_name: 3D保龄球
-    game_logo: logo1.png
+    game_logo: ./logo1.png
     game_link: https://bowling.marske.top
   - game_name: 游戏二
     game_logo: logo2.png
