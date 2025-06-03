@@ -4,8 +4,6 @@
       <v-card-title>关于我们</v-card-title>
       <v-card-text>
         这是一个由梦泽开发、Marske13搭建运维的在线游戏集合网站，将持续收录380余款在线小游戏，总大小1.4GB。
-        Github@YShenZe
-        Github@Maaaaacka
       </v-card-text>
       <v-card-text>
          Github@YShenZe
